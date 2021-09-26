@@ -5,10 +5,10 @@ pipeline {
       stage('SSH') {
          steps {
             withCredentials([sshUserPrivateKey(
-                credentialsId: 'jenkins.shipit', 
+                credentialsId: '00868783-e8db-4b49-b3d8-860b58f5e2fd',
                 keyFileVariable: 'keyfile')]) {
                     sh '''
-prod=centos@192.2.0.10
+prod=ec2-user@3.18.60.221
 cmd="docker ps"
 ssh -i "$keyfile" -o StrictHostKeyChecking=no $prod $cmd
                        '''
