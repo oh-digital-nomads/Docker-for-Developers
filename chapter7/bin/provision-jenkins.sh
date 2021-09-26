@@ -36,7 +36,7 @@ sudo systemctl restart docker
 sudo systemctl restart jenkins
 sudo systemctl restart yum-cron
 sudo systemctl restart firewalld
-sudo curl -L "https://github.com/docker/compose/releases/download/1.25.3/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 # Thanks https://serverfault.com/a/713849
 sudo firewall-cmd --permanent --zone=public --add-service=http
 sudo firewall-cmd --permanent --zone=public --add-masquerade
